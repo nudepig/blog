@@ -1,6 +1,7 @@
 from django.conf.urls import url,include
 
 from app01.views import account
+from app01.views import blog
 
 
 urlpatterns = [
@@ -20,6 +21,7 @@ urlpatterns = [
     # url(r'^auth/$', account.AuthView.as_view()),
     # url(r'^micro/$', course.MicroView.as_view()),
     url(r'^login/$', account.Account.as_view()),
-    
+    url(r'^blog/$', blog.BlogView.as_view()),
+
 
 ]
