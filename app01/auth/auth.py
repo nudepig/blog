@@ -9,4 +9,4 @@ class LuffyAuth(BaseAuthentication):
         obj = models.UserToken.objects.filter(token=token).first()
         if not obj:
             raise AuthenticationFailed({'code':1001,'error':'认证失败'})
-        return (obj.user.user,obj)
+        return (obj.user.username,obj)
